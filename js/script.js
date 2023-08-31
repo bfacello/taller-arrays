@@ -44,7 +44,13 @@ strangeArray.forEach((element)=>{if (typeof(strangeArray[strangeArray.indexOf(el
   {arrayOrdenado.push(strangeArray[strangeArray.indexOf(element)])}
 } )
 
-arrayOrdenado.sort()
+arrayOrdenado.sort(
+  (a, b)=>{
+if (a.toLowerCase() < b.toLowerCase()) return -1;
+if (a.toLowerCase() > b.toLowerCase()) return 1;
+return 0;
+  }
+)
 showList(arrayOrdenado)
 
 });
